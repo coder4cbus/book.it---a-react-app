@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styling/Book.css';
 import PropTypes from 'prop-types';
 
+
 const GENERIC_BOOK_TITLE = "New Book Title", GENERIC_BOOK_INFO = "New Book Info / Summary";
 
 class Book extends Component {
@@ -13,6 +14,7 @@ class Book extends Component {
       titleInput: GENERIC_BOOK_TITLE,
       info: GENERIC_BOOK_INFO,
       infoInput: GENERIC_BOOK_INFO,
+      // activeMode: true,
       editMode: false
     }
   }
@@ -40,6 +42,7 @@ class Book extends Component {
      this.setState({
      title: this.state.titleInput,
      info: this.state.infoInput,
+     // activeMode: true,
      editMode: false
      });
    }
@@ -79,6 +82,7 @@ class Book extends Component {
 Book.defaultProps = {
   title: "A cool title",
   info: "Info About Book",
+  // activeMode: true,
 };
 
 Book.propTypes = {
